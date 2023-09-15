@@ -1,5 +1,6 @@
 package data;
 
+import points.IPoint;
 import transport.ITransport;
 
 import java.awt.*;
@@ -9,8 +10,8 @@ import java.util.List;
 public class AppData {
     private static final AppData INSTANCE = new AppData();
 
-    public List<Point> pointsList = new ArrayList<>();
-    public List<ITransport> transportList = new ArrayList<>();;
+    public List<IPoint> currentPoints = new ArrayList<>();
+    public List<ITransport> currentTransport = new ArrayList<>();
 
     private AppData() {
     }
@@ -19,7 +20,12 @@ public class AppData {
         return INSTANCE;
     }
 
-    public void addPoint(Point point) {
-        pointsList.add(point);
+    public void addPoint(IPoint point) {
+        currentPoints.add(point);
+    }
+
+    public void addTransport(ITransport transport) {
+        if (!currentTransport.contains(transport))
+            currentTransport.add(transport);
     }
 }

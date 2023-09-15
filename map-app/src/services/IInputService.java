@@ -1,10 +1,8 @@
 package services;
 
-import java.awt.*;
+import points.IPoint;
 
 public interface IInputService extends IService {
-
-    Point getPoint();
-
-    void init();
+    void inputPoints();
+    void inputTransport();
 }

@@ -1,9 +1,7 @@
 package services;
 
-import data.AppData;
-
-import java.awt.*;
-import java.util.ArrayList;
+import points.IPoint;
+import java.util.List;
 
 public class GoogleMapService implements IMapService {
 
@@ -12,7 +10,7 @@ public class GoogleMapService implements IMapService {
     }
 
     @Override
-    public String buildPath(ArrayList<Point> points) {
-        return "Маршрут построен";
+    public void buildPath(List<IPoint> points) {
+        System.out.println("Маршрут построен из " + points.size() + " точек");
     }
 }

@@ -1,7 +1,10 @@
 package transport;
 
 public class Legs extends Transport {
-    public Legs(float speed) {
-        super(speed);
+
+    static final float SPEED = 2;
+
+    public Legs() {
+        super(SPEED);
     }
 }

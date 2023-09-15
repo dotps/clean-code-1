@@ -9,16 +9,19 @@ import services.GoogleMapService;
 public class App {
 
     public App() {
-        startApp();
+        start();
     }
 
-    private void startApp() {
+    private void start() {
 
         AppData appData = AppData.getInstance();
         IInputService inputService = new InputService(appData);
         IMapService mapService = new GoogleMapService();
 
-        inputService.init();
+        inputService.inputPoints();
+        inputService.inputTransport();
+
+        mapService.buildPath(appData.currentPoints);
 
     }
 }

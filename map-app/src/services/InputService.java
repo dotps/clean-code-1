@@ -1,8 +1,13 @@
 package services;
 
 import data.AppData;
+import points.IPoint;
+import points.Point2D;
+import points.Point3D;
+import transport.Car;
 
 import java.awt.*;
+import java.util.Random;
 import java.util.Scanner;
 
 public class InputService implements IInputService {
@@ -10,25 +15,28 @@ public class InputService implements IInputService {
     Scanner scanner;
 
     public InputService(AppData appData) {
+
         this.appData = appData;
         scanner = new Scanner(System.in);
     }
 
     @Override
-    public void init() {
-        Point point = getPoint();
-        appData.addPoint(point);
+    public void inputPoints() {
+
+        IPoint point = new Point2D(0,0);
+//        IPoint point = new Point3D(0,0,0);
+
+        for (int i = 0; i < 3; i++) {
+            IPoint newPoint = point.getRandomPoint();
+            appData.addPoint(newPoint);
+            System.out.println(newPoint.toString());
+        }
     }
 
     @Override
-    public Point getPoint() {
-
-        System.out.print("Input point X: ");
-        int x = scanner.nextInt();
-
-        System.out.print("Input point Y: ");
-        int y = scanner.nextInt();
-
-        return new Point(x, y);
+    public void inputTransport() {
+        appData.addTransport(new Car());
     }
+
+
 }
