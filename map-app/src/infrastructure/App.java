@@ -9,7 +9,9 @@ import services.GoogleMapService;
 public class App {
 
     public App() {
+
         start();
+
     }
 
     private void start() {
@@ -21,7 +23,7 @@ public class App {
         inputService.inputPoints();
         inputService.inputTransport();
 
-        mapService.buildPath(appData.currentPoints);
+        mapService.buildPath(appData.currentPoints, appData.currentTransport);
 
     }
 }

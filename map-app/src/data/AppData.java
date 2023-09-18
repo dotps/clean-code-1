@@ -22,6 +22,7 @@ public class AppData {
 
     public void addPoint(IPoint point) {
         currentPoints.add(point);
+        System.out.println(point.toString());
     }
 
     public void addTransport(ITransport transport) {
