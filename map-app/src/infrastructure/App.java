@@ -17,13 +17,12 @@ public class App {
     private void start() {
 
         AppData appData = AppData.getInstance();
-        IInputService inputService = new InputService(appData);
         IMapService mapService = new GoogleMapService();
+        IInputService inputService = new InputService(appData, mapService);
 
-        inputService.inputPoints();
-        inputService.inputTransport();
-
-        mapService.buildPath(appData.currentPoints, appData.currentTransport);
+        inputService.inputPointsHandler();
+        inputService.inputTransportHandler();
+        inputService.buildPathHandler();
 
     }
 }

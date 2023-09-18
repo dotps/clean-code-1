@@ -16,9 +16,5 @@ public class GoogleMapService implements IMapService {
             System.out.println(transport.getName());
         });
 
-//        String transportList = "";
-//        for (ITransport transport : transports)
-//            transportList += transport.getName() + " ";
-//        System.out.println("Способ перемещения: " + transportList);
     }
 }
