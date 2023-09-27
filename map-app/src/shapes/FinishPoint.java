@@ -1,10 +1,10 @@
 package shapes;
 
-public class FinishPoint extends MyPointDecorator {
+public class FinishPoint extends PointDecorator {
 
     static final String NAME = "Финиш";
 
-    public FinishPoint(IMyPoint point) {
+    public FinishPoint(IPoint point) {
         super(point);
     }
 

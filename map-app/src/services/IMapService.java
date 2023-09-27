@@ -1,11 +1,11 @@
 package services;
 
-import points.IPoint;
+import shapes.IPoint;
 import transport.ITransport;
 
 import java.util.List;
 
 public interface IMapService extends IService {
 
-    void buildPath(List<IPoint> points, List<ITransport> transports);
+    void buildAndDisplayPath(List<IPoint> points, List<ITransport> transports);
 }

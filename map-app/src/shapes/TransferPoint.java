@@ -1,10 +1,10 @@
 package shapes;
 
-public class TransferPoint extends MyPointDecorator {
+public class TransferPoint extends PointDecorator {
 
     static final String NAME = "Пересадка";
 
-    public TransferPoint(IMyPoint point) {
+    public TransferPoint(IPoint point) {
         super(point);
     }
 

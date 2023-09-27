@@ -1,6 +1,6 @@
-package points;
+package shapes;
 
 public interface IPoint {
-    IPoint getRandomPoint();
     void draw();
+    String getName();
 }

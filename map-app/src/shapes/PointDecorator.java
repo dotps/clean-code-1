@@ -1,9 +1,9 @@
 package shapes;
 
-public abstract class MyPointDecorator implements IMyPoint {
-    protected final IMyPoint point;
+public abstract class PointDecorator implements IPoint {
+    protected final IPoint point;
 
-    protected MyPointDecorator(IMyPoint point) {
+    protected PointDecorator(IPoint point) {
         this.point = point;
     }
 

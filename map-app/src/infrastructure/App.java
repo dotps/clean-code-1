@@ -9,9 +9,7 @@ import services.GoogleMapService;
 public class App {
 
     public App() {
-
         start();
-
     }
 
     private void start() {
