@@ -23,6 +23,11 @@ public class Point3D implements IPoint {
         return new Point3D(x, y, z);
     }
 
+    @Override
+    public void draw() {
+
+    }
+
     public String toString() {
         return "x=" + x + ", y=" + y + ", z=" + z;
     }

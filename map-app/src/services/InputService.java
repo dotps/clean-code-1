@@ -1,8 +1,10 @@
 package services;
 
 import data.AppData;
-import points.IPoint;
-import points.Point2D;
+import shapes.FinishPoint;
+import shapes.IMyPoint;
+import shapes.Point;
+import shapes.StartPoint;
 import transport.Bus;
 import transport.Legs;
 
@@ -18,6 +20,7 @@ public class InputService implements IInputService {
     @Override
     public void inputPointsHandler() {
 
+        /*
         IPoint point = new Point2D(0,0);
 //        IPoint point = new Point3D(0,0,0);
 
@@ -25,6 +28,15 @@ public class InputService implements IInputService {
             IPoint newPoint = point.getRandomPoint();
             appData.addPoint(newPoint);
         }
+         */
+
+        IMyPoint point = new Point();
+        IMyPoint startPoint = new StartPoint(point);
+        IMyPoint finishPoint = new FinishPoint(point);
+
+        System.out.println(point.getName());
+        System.out.println(startPoint.getName());
+
     }
 
     @Override

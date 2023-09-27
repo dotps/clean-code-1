@@ -21,6 +21,11 @@ public class Point2D implements IPoint {
     }
 
     @Override
+    public void draw() {
+
+    }
+
+    @Override
     public String toString() {
         return "x=" + x + ", y=" + y;
     }
