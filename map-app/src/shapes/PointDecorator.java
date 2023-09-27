@@ -17,4 +17,8 @@ public abstract class PointDecorator implements IPoint {
         return point.getName();
     }
 
+    public String toString() {
+        return point.toString();
+    }
+
 }
