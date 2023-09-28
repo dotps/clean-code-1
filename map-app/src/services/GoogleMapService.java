@@ -54,20 +54,4 @@ public class GoogleMapService implements IMapService {
         pathPoints.add(new Point(13,11));
         pathPoints.add(new Point(15,15));
     }
-
-//    private void calculationPath(List<IPoint> points, List<ITransport> transports) {
-//
-//        int startIndex = 0;
-//        int finishIndex = points.size() - 1;
-//
-//        IPoint startPoint = new StartPoint(points.get(startIndex));
-//        IPoint finishPoint = new FinishPoint(points.get(finishIndex));
-//
-//        points.remove(startIndex);
-//        points.remove(finishIndex);
-//
-//        for (IPoint point : points) {
-//
-//        }
-//    }
 }
