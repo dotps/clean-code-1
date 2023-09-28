@@ -10,7 +10,17 @@ public class TransferPoint extends PointDecorator {
 
     @Override
     public void draw() {
+        drawBackgroundLayer();
         super.draw();
+        startAnimation();
+    }
+
+    private void drawBackgroundLayer() {
+        System.out.println("Нарисован фон " + NAME);
+    }
+
+    private void startAnimation() {
+        System.out.println("Анимация запущена " + NAME);
     }
 
     @Override

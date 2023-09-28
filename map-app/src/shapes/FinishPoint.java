@@ -11,6 +11,11 @@ public class FinishPoint extends PointDecorator {
     @Override
     public void draw() {
         super.draw();
+        drawFinishIcon();
+    }
+
+    private void drawFinishIcon() {
+        System.out.println("Нарисована иконка " + NAME);
     }
 
     @Override

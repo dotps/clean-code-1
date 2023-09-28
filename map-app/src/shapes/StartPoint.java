@@ -11,6 +11,11 @@ public class StartPoint extends PointDecorator {
     @Override
     public void draw() {
         super.draw();
+        drawStartIcon();
+    }
+
+    private void drawStartIcon() {
+        System.out.println("Нарисована иконка " + NAME);
     }
 
     @Override

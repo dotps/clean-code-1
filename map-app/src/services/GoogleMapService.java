@@ -23,7 +23,9 @@ public class GoogleMapService implements IMapService {
         System.out.println("\nМаршрут построен из " + pathPoints.size() + " точек");
 
         pathPoints.forEach(point -> {
+            System.out.println();
             System.out.println(point.getName() + " " + point.toString());
+            point.draw();
         });
 
     }

@@ -1,6 +1,5 @@
 package data;
 
-import points.IPoint_;
 import shapes.IPoint;
 import transport.ITransport;
 
@@ -22,7 +21,7 @@ public class AppData {
 
     public void addPoint(IPoint point) {
         currentPoints.add(point);
-        System.out.println(point.toString());
+//        System.out.println(point.toString());
     }
 
     public void addTransport(ITransport transport) {
