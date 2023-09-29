@@ -20,8 +20,8 @@ public class Circle implements IShape {
         debug.log("--");
     }
 
-    @Override
-    public IShapeData getData() {
-        return null;
-    }
+//    @Override
+//    public IShapeData getData() {
+//        return null;
+//    }
 }

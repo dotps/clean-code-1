@@ -2,12 +2,11 @@ package shapes;
 
 import data.IShapeData;
 import data.PointData;
+import data.ShapeDataTest;
 import utils.debug;
 public class Point implements IShape {
-//    private final float x;
-//    private final float y;
 
-    private PointData data;
+    public PointData data;
 
     public Point(float x, float y) {
         data = new PointData(x, y);
@@ -19,6 +18,10 @@ public class Point implements IShape {
         debug.log(data.y);
     }
 
+//    @Override
+//    public IShapeData getData() {
+//        return data;
+//    }
 
 
 }

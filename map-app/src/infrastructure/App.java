@@ -1,10 +1,7 @@
 package infrastructure;
 
 import data.AppData;
-import services.IInputService;
-import services.IMapService;
-import services.InputService;
-import services.GoogleMapService;
+import services.*;
 
 public class App {
 
@@ -15,10 +12,10 @@ public class App {
     private void start() {
 
         AppData appData = AppData.getInstance();
-        IMapService mapService = new GoogleMapService();
-        IInputService inputService = new InputService(appData, mapService);
+        DrawFactory drawFactory = new DrawFactory();
+        IInputService inputService = new InputService(appData, drawFactory);
 
-        inputService.inputPointsHandler();
+        inputService.inputShapesHandler();
 
     }
 }
