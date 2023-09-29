@@ -1,9 +1,10 @@
 package services;
 
 import data.AppData;
+import jdk.nashorn.internal.runtime.Debug;
+import jdk.nashorn.internal.runtime.logging.DebugLogger;
 import shapes.*;
-import transport.Bus;
-import transport.Legs;
+import utils.debug;
 
 public class InputService implements IInputService {
     private final AppData appData;
@@ -16,21 +17,19 @@ public class InputService implements IInputService {
 
     @Override
     public void inputPointsHandler() {
-        appData.addPoint(new Point(0,0));
-        appData.addPoint(new Point(20,10));
-        appData.addPoint(new Point(50,30));
-    }
 
-    @Override
-    public void inputTransportHandler() {
-        appData.addTransport(new Legs());
-        appData.addTransport(new Bus());
-    }
+//        appData.addPoint(new Point(0,0));
+//        appData.addPoint(new Point(20,10));
+//        appData.addPoint(new Point(50,30));
 
-    @Override
-    public void buildPathHandler() {
-        mapService.buildAndDisplayPath(appData.currentPoints, appData.currentTransport);
-    }
+        IShape pointStart = new Point(0,0);
+//        IShape pointFinish = new Point(10,10);
 
+        pointStart.draw();
+//        pointFinish.draw();
+
+//        IShape line = new Line(pointStart, pointFinish);
+//        line.draw();
+    }
 
 }

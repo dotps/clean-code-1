@@ -1,6 +1,6 @@
 package data;
 
-import shapes.IPoint;
+import shapes.IShape;
 import transport.ITransport;
 
 import java.util.ArrayList;
@@ -9,7 +9,7 @@ import java.util.List;
 public class AppData {
     private static final AppData INSTANCE = new AppData();
 
-    public List<IPoint> currentPoints = new ArrayList<>();
+    public List<IShape> currentPoints = new ArrayList<>();
     public List<ITransport> currentTransport = new ArrayList<>();
 
     private AppData() {
@@ -19,7 +19,7 @@ public class AppData {
         return INSTANCE;
     }
 
-    public void addPoint(IPoint point) {
+    public void addPoint(IShape point) {
         currentPoints.add(point);
 //        System.out.println(point.toString());
     }

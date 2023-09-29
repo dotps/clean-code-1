@@ -19,8 +19,6 @@ public class App {
         IInputService inputService = new InputService(appData, mapService);
 
         inputService.inputPointsHandler();
-        inputService.inputTransportHandler();
-        inputService.buildPathHandler();
 
     }
 }
