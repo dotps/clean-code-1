@@ -1,15 +1,16 @@
 package shapes;
 
+import data.CircleData;
 import data.IShapeData;
+import data.LineData;
 import utils.debug;
 
 public class Circle implements IShape {
-    private final IShape centerPoint;
-    private final float radius;
 
-    public Circle(IShape centerPoint, float radius) {
-        this.centerPoint = centerPoint;
-        this.radius = radius;
+    public CircleData data;
+
+    public Circle(Point centerPoint, float radius) {
+        data = new CircleData(centerPoint, radius);
     }
 
     @Override

@@ -19,10 +19,12 @@ public class InputService implements IInputService {
         IShape pointFinish = new Point(10,10);
 
         IShape line = new Line(new Point(5,5), new Point(15,15));
+        IShape circle = new Circle(new Point(50,50), 10);
 
         drawFactory.create(pointStart);
         drawFactory.create(pointFinish);
         drawFactory.create(line);
+        drawFactory.create(circle);
 
         pointStart.draw();
 

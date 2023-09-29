@@ -9,11 +9,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Line implements IShape {
-//    private final List<IShape> linePoints = new ArrayList<>();
+
     public LineData data;
 
-    public Line(IShape pointStart, IShape pointFinish) {
-        List<IShape> pointsOfLine = new ArrayList<>();
+    public Line(Point pointStart, Point pointFinish) {
+        List<Point> pointsOfLine = new ArrayList<>();
         pointsOfLine.add(pointStart);
         pointsOfLine.add(pointFinish);
         data = new LineData(pointsOfLine);
