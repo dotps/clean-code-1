@@ -1,16 +1,11 @@
 package data;
 
-public class PointData implements IShapeData {
+public class PointData {
     public float x;
     public float y;
 
     public PointData(float x, float y) {
         this.x = x;
         this.y = y;
-    }
-
-    @Override
-    public IShapeData getData() {
-        return this;
     }
 }

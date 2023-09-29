@@ -1,8 +1,8 @@
 package services;
 
 import data.AppData;
-import jdk.nashorn.internal.runtime.Debug;
-import jdk.nashorn.internal.runtime.logging.DebugLogger;
+import data.IShapeData;
+import data.PointData;
 import shapes.*;
 import utils.debug;
 
@@ -26,6 +26,9 @@ public class InputService implements IInputService {
 //        IShape pointFinish = new Point(10,10);
 
         pointStart.draw();
+        pointStart.getData();
+//        IShapeData data = pointStart.getData();
+//        debug.log(data.);
 //        pointFinish.draw();
 
 //        IShape line = new Line(pointStart, pointFinish);
