@@ -1,5 +1,8 @@
 package services.draw;
 
+import data.IShapeData;
+import data.LineData;
+import data.PointData;
 import shapes.IShape;
 import shapes.Line;
 import utils.debug;
@@ -12,7 +15,13 @@ public class DrawLine implements IDrawStrategy {
             return;
 
         Line line = (Line) shape;
-        debug.log("DRAW");
-        debug.log(line.getClass().getName());
+        debug.log("DRAW " + line.getClass().getName());
+
+        LineData lineData = (LineData) line.getData();
+        lineData.points.forEach(point -> {
+            PointData pointData = (PointData) point.getData();
+            debug.log("X " + pointData.x + ", Y " + pointData.y);
+        });
+
     }
 }

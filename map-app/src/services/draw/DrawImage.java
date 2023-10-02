@@ -12,7 +12,6 @@ public class DrawImage implements IDrawStrategy {
             return;
 
         Image image = (Image) shape;
-        debug.log("DRAW");
-        debug.log(image.getClass().getName());
+        debug.log("DRAW " + image.getClass().getName());
     }
 }

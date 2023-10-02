@@ -1,5 +1,6 @@
 package services.draw;
 
+import data.PointData;
 import shapes.IShape;
 import shapes.Point;
 import utils.debug;
@@ -12,7 +13,9 @@ public class DrawPoint implements IDrawStrategy {
             return;
 
         Point point = (Point) shape;
-        debug.log("DRAW");
-        debug.log(point.getClass().getName());
+        debug.log("DRAW " + point.getClass().getName());
+
+        PointData pointData = (PointData) point.getData();
+        debug.log("X " + pointData.x + ", Y " + pointData.y);
     }
 }

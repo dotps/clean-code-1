@@ -1,9 +1,9 @@
 package services.draw;
 
+import data.IShapeData;
+import data.LineData;
 import services.draw.IDrawStrategy;
-import shapes.Circle;
-import shapes.IShape;
-import shapes.Rectangle;
+import shapes.*;
 import utils.debug;
 
 public class DrawRectangle implements IDrawStrategy {
@@ -14,9 +14,12 @@ public class DrawRectangle implements IDrawStrategy {
             return;
 
         Rectangle rect = (Rectangle) shape;
-        debug.log("DRAW");
-        debug.log(rect.getClass().getName());
-        debug.log(rect.getData());
+        debug.log("DRAW " + rect.getClass().getName());
+
+        LineData rectData = (LineData) rect.getData();
+
+        RectangleCalc.getRectangleVertexPoints(rectData.points);
+
 
     }
 }

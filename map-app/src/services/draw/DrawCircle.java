@@ -12,7 +12,6 @@ public class DrawCircle implements IDrawStrategy {
             return;
 
         Circle circle = (Circle) shape;
-        debug.log("DRAW");
-        debug.log(circle.getClass().getName());
+        debug.log("DRAW " + circle.getClass().getName());
     }
 }
