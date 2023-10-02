@@ -1,7 +1,7 @@
 package infrastructure;
 
-import data.AppData;
 import services.*;
+import services.draw.DrawService;
 
 public class App {
 
@@ -11,9 +11,8 @@ public class App {
 
     private void start() {
 
-        AppData appData = AppData.getInstance();
-        DrawFactory drawFactory = new DrawFactory();
-        IInputService inputService = new InputService(appData, drawFactory);
+        DrawService drawService = new DrawService();
+        IInputService inputService = new InputService(drawService);
 
         inputService.inputShapesHandler();
 

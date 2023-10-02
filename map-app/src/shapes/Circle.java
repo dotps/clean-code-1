@@ -1,28 +1,12 @@
 package shapes;
 
 import data.CircleData;
-import data.IShapeData;
-import data.LineData;
-import utils.debug;
+import services.draw.DrawCircle;
 
-public class Circle implements IShape {
-
-    public CircleData data;
+public class Circle extends Shape {
 
     public Circle(Point centerPoint, float radius) {
-        data = new CircleData(centerPoint, radius);
+        setData(new CircleData(centerPoint, radius));
+        setDrawStrategy(new DrawCircle());
     }
-
-    @Override
-    public void draw() {
-        debug.log("--");
-        debug.log(this.getClass().getName());
-
-        debug.log("--");
-    }
-
-//    @Override
-//    public IShapeData getData() {
-//        return null;
-//    }
 }

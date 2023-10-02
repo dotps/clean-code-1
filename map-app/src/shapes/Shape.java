@@ -1,10 +1,28 @@
 package shapes;
 
-import java.awt.*;
+import data.IShapeData;
+import services.draw.IDrawStrategy;
 
-public abstract class Shape implements IShape {
+public class Shape implements IShape {
 
-//    protected float thickness;
-//    protected Color color = Color.GRAY;
+    private IShapeData data;
 
+    private IDrawStrategy drawStrategy;
+
+    @Override
+    public IDrawStrategy getDrawStrategy() {
+        return drawStrategy;
+    }
+
+    public void setDrawStrategy(IDrawStrategy drawStrategy) {
+        this.drawStrategy = drawStrategy;
+    }
+
+    public IShapeData getData() {
+        return data;
+    }
+
+    public void setData(IShapeData data) {
+        this.data = data;
+    }
 }

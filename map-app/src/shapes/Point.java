@@ -1,27 +1,13 @@
 package shapes;
 
-import data.IShapeData;
 import data.PointData;
-import data.ShapeDataTest;
-import utils.debug;
-public class Point implements IShape {
+import services.draw.DrawPoint;
 
-    public PointData data;
+public class Point extends Shape {
 
     public Point(float x, float y) {
-        data = new PointData(x, y);
+        setData(new PointData(x, y));
+        setDrawStrategy(new DrawPoint());
     }
-
-    public void draw() {
-        debug.log(this.getClass().getName());
-        debug.log(data.x);
-        debug.log(data.y);
-    }
-
-//    @Override
-//    public IShapeData getData() {
-//        return data;
-//    }
-
 
 }

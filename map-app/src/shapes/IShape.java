@@ -1,8 +1,7 @@
 package shapes;
 
-import data.IShapeData;
+import services.draw.IDrawStrategy;
 
 public interface IShape {
-    void draw();
-//    IShapeData getData();
+    IDrawStrategy getDrawStrategy();
 }

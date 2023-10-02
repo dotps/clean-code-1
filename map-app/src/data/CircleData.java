@@ -3,7 +3,7 @@ package data;
 import shapes.IShape;
 import shapes.Point;
 
-public class CircleData {
+public class CircleData implements IShapeData {
     public Point centerPoint;
     public float radius;
 

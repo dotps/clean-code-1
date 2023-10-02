@@ -1,32 +1,28 @@
 package services;
 
-import data.AppData;
+import services.draw.DrawService;
 import shapes.*;
+import utils.debug;
 
 public class InputService implements IInputService {
-    private final AppData appData;
-    private final DrawFactory drawFactory;
+    private final DrawService drawService;
 
-    public InputService(AppData appData, DrawFactory drawFactory) {
-        this.appData = appData;
-        this.drawFactory = drawFactory;
+    public InputService(DrawService drawService) {
+        this.drawService = drawService;
     }
 
     @Override
     public void inputShapesHandler() {
 
-        IShape pointStart = new Point(0,0);
-        IShape pointFinish = new Point(10,10);
+        Point point = new Point(0,0);
+        Line line = new Line(new Point(5,5), new Point(15,15));
+        Rectangle rect = new Rectangle(new Point(10,10), new Point(50,50));
 
-        IShape line = new Line(new Point(5,5), new Point(15,15));
-        IShape circle = new Circle(new Point(50,50), 10);
-
-        drawFactory.create(pointStart);
-        drawFactory.create(pointFinish);
-        drawFactory.create(line);
-        drawFactory.create(circle);
-
-        pointStart.draw();
+        drawService.draw(point);
+        debug.log("=====");
+        drawService.draw(line);
+        debug.log("=====");
+        drawService.draw(rect);
 
     }
 

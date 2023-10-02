@@ -1,6 +1,6 @@
 package data;
 
-public class PointData {
+public class PointData implements IShapeData {
     public float x;
     public float y;
 
