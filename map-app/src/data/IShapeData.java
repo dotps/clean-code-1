@@ -1,5 +1,7 @@
 package data;
 
-public interface IShapeData {
+import java.io.Serializable;
+
+public interface IShapeData extends Serializable {
 
 }
