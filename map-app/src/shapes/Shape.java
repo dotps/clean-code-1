@@ -3,7 +3,7 @@ package shapes;
 import data.IShapeData;
 import services.draw.IDrawStrategy;
 
-public class Shape implements IShape {
+public abstract class Shape implements IShape {
 
     private IShapeData data;
 
