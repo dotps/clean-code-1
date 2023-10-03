@@ -28,8 +28,6 @@ public class InputService implements IInputService {
         debug.log("=====");
         drawService.draw(rect);
         debug.log("=====");
-        drawService.draw(rect);
-        debug.log("=====");
         drawService.draw(star);
 
     }

@@ -1,10 +1,10 @@
 package services.draw;
 
-import data.IShapeData;
 import data.LineData;
-import services.draw.IDrawStrategy;
 import shapes.*;
 import utils.debug;
+
+import java.util.List;
 
 public class DrawRectangle implements IDrawStrategy {
     @Override
@@ -18,8 +18,11 @@ public class DrawRectangle implements IDrawStrategy {
 
         LineData rectData = (LineData) rect.getData();
 
-        RectangleCalc.getRectangleVertexPoints(rectData.points);
+        List<Line> lines = RectangleCalc.getLines(rectData.points);
 
-
+        lines.forEach(line -> {
+            IDrawStrategy drawStrategy = line.getDrawStrategy();
+            drawStrategy.draw(line);
+        });
     }
 }
