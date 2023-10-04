@@ -1,13 +1,18 @@
 package shapes;
 
-import data.IShapeData;
+import data.PointData;
+import data.ShapeData;
 import services.draw.IDrawStrategy;
+
+import java.util.List;
 
 public abstract class Shape implements IShape {
 
-    private IShapeData data;
+    private ShapeData data;
 
     private IDrawStrategy drawStrategy;
+
+
 
     @Override
     public IDrawStrategy getDrawStrategy() {
@@ -18,11 +23,15 @@ public abstract class Shape implements IShape {
         this.drawStrategy = drawStrategy;
     }
 
-    public IShapeData getData() {
-        return data;
+    public List<PointData> getAllPointsData() {
+        return data.points;
     }
 
-    public void setData(IShapeData data) {
+    public PointData getFirstPointData() {
+        return data.points.get(0);
+    }
+
+    public void setData(ShapeData data) {
         this.data = data;
     }
 }

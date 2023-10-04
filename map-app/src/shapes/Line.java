@@ -1,7 +1,8 @@
 package shapes;
 
-import data.LineData;
-import services.draw.DrawLine;
+import data.PointData;
+import data.ShapeData;
+import services.draw.strategies.DrawLine;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,11 +10,11 @@ import java.util.List;
 public class Line extends Shape {
     public Line(Point pointStart, Point pointFinish) {
 
-        List<Point> pointsOfLine = new ArrayList<>();
-        pointsOfLine.add(pointStart);
-        pointsOfLine.add(pointFinish);
+        List<PointData> pointDataList = new ArrayList<>();
+        pointDataList.add(pointStart.getFirstPointData());
+        pointDataList.add(pointFinish.getFirstPointData());
 
-        setData(new LineData(pointsOfLine));
+        setData(new ShapeData(pointDataList));
         setDrawStrategy(new DrawLine());
     }
 }

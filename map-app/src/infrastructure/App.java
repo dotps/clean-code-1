@@ -1,7 +1,8 @@
 package infrastructure;
 
-import services.*;
 import services.draw.DrawService;
+import services.input.IInputService;
+import services.input.InputService;
 
 public class App {
 

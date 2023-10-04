@@ -1,6 +1,11 @@
 package data;
 
-public class PointData implements IShapeData {
+import shapes.Point;
+
+import java.io.Serializable;
+import java.util.List;
+
+public class PointData implements Serializable {
     public double x;
     public double y;
 

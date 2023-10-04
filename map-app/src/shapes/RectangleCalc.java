@@ -7,40 +7,15 @@ import java.util.List;
 
 public class RectangleCalc {
 
-    public static List<Point> getVertexPoints(List<Point> pointsRange) {
+    public static List<PointData> getVertexPoints(PointData pointStartData, PointData pointFinishData) {
 
-        List<Point> points = new ArrayList<>();
+        List<PointData> pointDataList = new ArrayList<>();
 
-        Point startCornerPoint = pointsRange.get(0);
-        PointData startCornerPointData = (PointData) startCornerPoint.getData();
+        pointDataList.add(pointStartData);
+        pointDataList.add(new PointData(pointFinishData.x, pointStartData.y));
+        pointDataList.add(pointFinishData);
+        pointDataList.add(new PointData(pointStartData.x, pointFinishData.y));
 
-        Point finishCornerPoint = pointsRange.get(1);
-        PointData finishCornerPointData = (PointData) finishCornerPoint.getData();
-
-        points.add(startCornerPoint);
-        points.add(new Point(finishCornerPointData.x, startCornerPointData.y));
-        points.add(finishCornerPoint);
-        points.add(new Point(startCornerPointData.x, finishCornerPointData.y));
-
-        return points;
+        return pointDataList;
     }
-
-    public static List<Line> getLines(List<Point> pointsRange) {
-
-        List<Line> lines = new ArrayList<>();
-
-        Point startCornerPoint = pointsRange.get(0);
-        PointData startCornerPointData = (PointData) startCornerPoint.getData();
-
-        Point finishCornerPoint = pointsRange.get(1);
-        PointData finishCornerPointData = (PointData) finishCornerPoint.getData();
-
-        lines.add(new Line(startCornerPoint, new Point(finishCornerPointData.x, startCornerPointData.y)));
-        lines.add(new Line(new Point(finishCornerPointData.x, startCornerPointData.y), finishCornerPoint));
-        lines.add(new Line(finishCornerPoint, new Point(startCornerPointData.x, finishCornerPointData.y)));
-        lines.add(new Line(new Point(startCornerPointData.x, finishCornerPointData.y), startCornerPoint));
-
-        return lines;
-    }
-
 }

@@ -1,10 +1,16 @@
 package shapes;
 
-import services.draw.DrawRectangle;
+import data.PointData;
+import data.ShapeData;
+import services.draw.strategies.DrawLine;
+import java.util.List;
 
-public class Rectangle extends Line {
+public class Rectangle extends Shape {
     public Rectangle(Point pointStart, Point pointFinish) {
-        super(pointStart, pointFinish);
-        setDrawStrategy(new DrawRectangle());
+
+        List<PointData> pointDataList = RectangleCalc.getVertexPoints(pointStart.getFirstPointData(), pointFinish.getFirstPointData());
+
+        setData(new ShapeData(pointDataList));
+        setDrawStrategy(new DrawLine());
     }
 }

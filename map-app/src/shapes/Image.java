@@ -1,6 +1,6 @@
 package shapes;
 
-import services.draw.DrawImage;
+import services.draw.strategies.DrawLine;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +13,6 @@ public class Image extends Shape {
         this.shapes = shapes;
 
 //        data = new ImageData(shapes);
-        setDrawStrategy(new DrawImage());
+        setDrawStrategy(new DrawLine());
     }
 }
