@@ -1,6 +1,7 @@
 package services.input;
 
 import services.IService;
+import shapes.*;
 
 import java.io.IOException;
 
