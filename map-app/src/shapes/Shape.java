@@ -4,6 +4,7 @@ import data.PointData;
 import data.ShapeData;
 import services.draw.IDrawStrategy;
 
+import java.util.Arrays;
 import java.util.List;
 
 public abstract class Shape implements IShape {
@@ -33,5 +34,16 @@ public abstract class Shape implements IShape {
 
     public void setData(ShapeData data) {
         this.data = data;
+    }
+
+    public ShapeData getData() {
+        return data;
+    }
+
+    @Override
+    public String toString() {
+        return "Shape{" +
+                "data=" + data +
+                '}';
     }
 }

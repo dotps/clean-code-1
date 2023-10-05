@@ -14,7 +14,15 @@ public class Point extends Shape {
         List<PointData> pointDataList = new ArrayList<>();
         pointDataList.add(new PointData(x,y));
 
-        setData(new ShapeData(pointDataList));
+        setData(new ShapeData(pointDataList, Shapes.Point));
+        injectDrawStrategy();
+    }
+
+    public Point() {
+        injectDrawStrategy();
+    }
+
+    private void injectDrawStrategy() {
         setDrawStrategy(new DrawPoint());
     }
 

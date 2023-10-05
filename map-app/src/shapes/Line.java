@@ -14,7 +14,15 @@ public class Line extends Shape {
         pointDataList.add(pointStart.getFirstPointData());
         pointDataList.add(pointFinish.getFirstPointData());
 
-        setData(new ShapeData(pointDataList));
+        setData(new ShapeData(pointDataList, Shapes.Line));
+        injectDrawStrategy();
+    }
+
+    public Line() {
+        injectDrawStrategy();
+    }
+
+    private void injectDrawStrategy() {
         setDrawStrategy(new DrawLine());
     }
 }

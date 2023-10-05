@@ -10,7 +10,16 @@ public class Rectangle extends Shape {
 
         List<PointData> pointDataList = RectangleCalc.getVertexPoints(pointStart.getFirstPointData(), pointFinish.getFirstPointData());
 
-        setData(new ShapeData(pointDataList));
+        setData(new ShapeData(pointDataList, Shapes.Rectangle));
+        injectDrawStrategy();
+
+    }
+
+    public Rectangle() {
+        injectDrawStrategy();
+    }
+
+    private void injectDrawStrategy() {
         setDrawStrategy(new DrawLine());
     }
 }

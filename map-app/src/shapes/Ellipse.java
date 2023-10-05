@@ -15,7 +15,15 @@ public class Ellipse extends Shape {
         pointDataList.add(centerPoint.getFirstPointData());
         pointDataList.add(new PointData(radius, radius));
 
-        setData(new ShapeData(pointDataList));
+        setData(new ShapeData(pointDataList, Shapes.Ellipse));
+        injectDrawStrategy();
+    }
+
+    public Ellipse() {
+        injectDrawStrategy();
+    }
+
+    private void injectDrawStrategy() {
         setDrawStrategy(new DrawEllipse());
     }
 }
