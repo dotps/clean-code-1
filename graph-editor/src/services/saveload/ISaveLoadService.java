@@ -7,6 +7,6 @@ import shapes.IShape;
 import java.io.IOException;
 
 public interface ISaveLoadService extends IService {
-    void saveShape(ShapeData data) throws IOException;
-    IShape loadShape() throws IOException, ClassNotFoundException;
+    void saveShape(ShapeData data);
+    IShape loadShape();
 }

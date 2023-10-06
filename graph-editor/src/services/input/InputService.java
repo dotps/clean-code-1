@@ -42,7 +42,6 @@ public class InputService implements IInputService {
             shapeFactory.createPoint(10,10),
             shapeFactory.createPoint(100,100)
         );
-//        Star star = new Star(new Point(5,5), new Point(15,15));
 
         drawService.draw(point);
         debug.log("=====");

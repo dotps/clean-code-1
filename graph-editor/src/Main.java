@@ -6,7 +6,6 @@ import services.input.IInputService;
 import services.input.InputService;
 import services.saveload.ISaveLoadService;
 import services.saveload.SaveLoadService;
-import shapes.IShape;
 
 import java.io.IOException;
 
