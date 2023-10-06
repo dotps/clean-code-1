@@ -20,6 +20,5 @@ public class Main {
         IInputService inputService = new InputService(drawService, saveLoadService, shapeFactory);
 
         inputService.inputShapesHandler();
-
     }
 }
