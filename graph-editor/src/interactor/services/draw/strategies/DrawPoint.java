@@ -1,8 +1,8 @@
-package services.draw.strategies;
+package interactor.services.draw.strategies;
 
 import data.PointData;
-import services.draw.IDrawStrategy;
-import shapes.IShape;
+import interactor.services.draw.IDrawStrategy;
+import interactor.shapes.IShape;
 import utils.debug;
 
 public class DrawPoint implements IDrawStrategy {

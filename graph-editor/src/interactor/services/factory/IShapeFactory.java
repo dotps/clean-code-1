@@ -1,6 +1,6 @@
-package services.factory;
+package interactor.services.factory;
 
-import shapes.*;
+import interactor.shapes.*;
 import data.*;
 
 public interface IShapeFactory {

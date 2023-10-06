@@ -1,8 +1,8 @@
-package shapes;
+package interactor.shapes;
 
 import data.PointData;
 import data.ShapeData;
-import services.draw.strategies.DrawLine;
+import interactor.services.draw.strategies.DrawLine;
 
 import java.util.ArrayList;
 import java.util.List;

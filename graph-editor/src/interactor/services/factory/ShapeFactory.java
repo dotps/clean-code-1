@@ -1,8 +1,7 @@
-package services.factory;
+package interactor.services.factory;
 
 import data.ShapeData;
-import shapes.*;
-import utils.debug;
+import interactor.shapes.*;
 
 public class ShapeFactory implements IShapeFactory {
 

@@ -1,9 +1,6 @@
 package data;
 
-import shapes.Point;
-
 import java.io.Serializable;
-import java.util.List;
 
 public class PointData implements Serializable {
     public double x;

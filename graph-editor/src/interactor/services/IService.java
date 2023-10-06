@@ -1,4 +1,4 @@
-package services;
+package interactor.services;
 
 public interface IService {
 }

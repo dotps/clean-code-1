@@ -1,4 +1,4 @@
-package shapes;
+package interactor.shapes;
 
 public enum Shapes {
     Point,

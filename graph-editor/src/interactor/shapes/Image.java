@@ -1,6 +1,6 @@
-package shapes;
+package interactor.shapes;
 
-import services.draw.strategies.DrawLine;
+import interactor.services.draw.strategies.DrawLine;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +12,7 @@ public class Image extends Shape {
     public Image(List<IShape> shapes) {
         this.shapes = shapes;
 
-//        data = new ImageData(shapes);
+//        data = new ImageData(interactor.shapes);
         setDrawStrategy(new DrawLine());
     }
 }

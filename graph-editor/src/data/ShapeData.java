@@ -1,7 +1,6 @@
 package data;
 
-import shapes.Shape;
-import shapes.Shapes;
+import interactor.shapes.Shapes;
 
 import java.io.Serializable;
 import java.util.List;

@@ -1,11 +1,11 @@
-package services.saveload;
+package interactor.services.saveload;
 
 import data.ShapeData;
 import repository.FileSaveLoad;
 import repository.ISaveLoad;
-import services.factory.IShapeFactory;
+import interactor.services.factory.IShapeFactory;
 import utils.debug;
-import shapes.*;
+import interactor.shapes.*;
 
 public class SaveLoadService implements ISaveLoadService {
     private final IShapeFactory shapeFactory;

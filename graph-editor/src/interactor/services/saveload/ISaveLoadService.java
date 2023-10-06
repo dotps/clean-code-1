@@ -1,10 +1,8 @@
-package services.saveload;
+package interactor.services.saveload;
 
 import data.ShapeData;
-import services.IService;
-import shapes.IShape;
-
-import java.io.IOException;
+import interactor.services.IService;
+import interactor.shapes.IShape;
 
 public interface ISaveLoadService extends IService {
     void saveShape(ShapeData data);

@@ -1,13 +1,9 @@
-package services.input;
+package interactor.services.input;
 
-import data.ShapeData;
-import services.draw.DrawService;
-import services.draw.IDrawService;
-import services.factory.IShapeFactory;
-import services.factory.ShapeFactory;
-import services.saveload.ISaveLoadService;
-import services.saveload.SaveLoadService;
-import shapes.*;
+import interactor.services.draw.IDrawService;
+import interactor.services.factory.IShapeFactory;
+import interactor.services.saveload.ISaveLoadService;
+import interactor.shapes.*;
 import utils.debug;
 
 import java.io.IOException;
@@ -24,7 +20,7 @@ public class InputService implements IInputService {
     }
 
     @Override
-    public void inputShapesHandler() throws IOException, ClassNotFoundException {
+    public void inputShapesHandler() {
 
         Point point = shapeFactory.createPoint(0, 0);
 

@@ -1,4 +1,4 @@
-package shapes;
+package interactor.shapes;
 
 import java.util.List;
 

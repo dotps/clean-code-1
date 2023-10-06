@@ -1,6 +1,6 @@
-package services.draw;
+package interactor.services.draw;
 
-import shapes.IShape;
+import interactor.shapes.IShape;
 
 public class DrawService implements IDrawService {
 
