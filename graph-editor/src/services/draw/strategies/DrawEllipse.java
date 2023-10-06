@@ -11,7 +11,7 @@ public class DrawEllipse implements IDrawStrategy {
 
     static final int INDEX_POINT = 0;
     static final int INDEX_RADIUS = 1;
-    static final int COUNT_POINT_FOR_ELLIPSE = 20;
+    static final int COUNT_POINT_FOR_ELLIPSE = 2;
 
     @Override
     public void draw(IShape shape) {
