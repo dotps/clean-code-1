@@ -9,17 +9,24 @@ public class ShapeFactory implements IShapeFactory {
     @Override
     public IShape createShape(ShapeData shapeData) {
 
-        Shapes shapeType = shapeData.shapeType;
-
-        switch (shapeType) {
+        switch (shapeData.shapeType) {
             case Point:
-                return createPoint(shapeData);
+                Point point = createPoint(0,0);
+                point.setData(shapeData);
+                return point;
             case Line:
-                return createLine(shapeData);
+                Line line = createLine(createPoint(0,0), createPoint(0,0));
+                line.setData(shapeData);
+                return line;
             case Rectangle:
-                return createRect(shapeData);
+                Rectangle rect = createRect(createPoint(0,0), createPoint(0,0));
+                rect.setData(shapeData);
+                return rect;
             case Ellipse:
-                return createEllipse(shapeData);
+                Point radius = createPoint(0,0);
+                Ellipse ellipse = createEllipse(createPoint(0, 0), radius);
+                ellipse.setData(shapeData);
+                return ellipse;
             case Star:
                 return null;
             default:
@@ -27,27 +34,19 @@ public class ShapeFactory implements IShapeFactory {
         }
     }
 
-    private static Line createLine(ShapeData shapeData) {
-        Line shape = new Line();
-        shape.setData(shapeData);
-        return shape;
+    public Point createPoint(double x, double y) {
+        return new Point(x, y);
     }
 
-    private static Rectangle createRect(ShapeData shapeData) {
-        Rectangle shape = new Rectangle();
-        shape.setData(shapeData);
-        return shape;
+    public Line createLine(Point pointStart, Point pointFinish) {
+        return new Line(pointStart, pointFinish);
     }
 
-    private static Point createPoint(ShapeData shapeData) {
-        Point shape = new Point();
-        shape.setData(shapeData);
-        return shape;
+    public Rectangle createRect(Point pointStart, Point pointFinish) {
+        return new Rectangle(pointStart, pointFinish);
     }
 
-    private static Ellipse createEllipse(ShapeData shapeData) {
-        Ellipse shape = new Ellipse();
-        shape.setData(shapeData);
-        return shape;
+    public Ellipse createEllipse(Point centerPoint, Point radius) {
+        return new Ellipse(centerPoint, radius);
     }
 }

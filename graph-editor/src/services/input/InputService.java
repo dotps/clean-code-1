@@ -1,5 +1,6 @@
 package services.input;
 
+import data.ShapeData;
 import services.draw.DrawService;
 import services.draw.IDrawService;
 import services.factory.IShapeFactory;
@@ -25,10 +26,22 @@ public class InputService implements IInputService {
     @Override
     public void inputShapesHandler() throws IOException, ClassNotFoundException {
 
-        Point point = new Point(0,0);
-        Line line = new Line(new Point(5,5), new Point(15,15));
-        Rectangle rect = new Rectangle(new Point(10,10), new Point(50,50));
-        Ellipse ellipse = new Ellipse(new Point(10,10), 100);
+        Point point = shapeFactory.createPoint(0, 0);
+
+        Line line = shapeFactory.createLine(
+            shapeFactory.createPoint(5, 5),
+            shapeFactory.createPoint(15,15)
+        );
+
+        Rectangle rect = shapeFactory.createRect(
+            shapeFactory.createPoint(10,10),
+            shapeFactory.createPoint(50,50)
+        );
+
+        Ellipse ellipse = shapeFactory.createEllipse(
+            shapeFactory.createPoint(10,10),
+            shapeFactory.createPoint(100,100)
+        );
 //        Star star = new Star(new Point(5,5), new Point(15,15));
 
         drawService.draw(point);
@@ -41,7 +54,7 @@ public class InputService implements IInputService {
         debug.log("=====");
 //        drawService.draw(star);
 
-        saveLoadService.saveShape(ellipse.getData());
+        saveLoadService.saveShape(rect.getData());
         IShape loadedShape = saveLoadService.loadShape();
 
         drawService.draw(loadedShape);

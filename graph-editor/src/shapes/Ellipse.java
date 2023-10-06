@@ -9,11 +9,11 @@ import java.util.List;
 
 public class Ellipse extends Shape {
 
-    public Ellipse(Point centerPoint, double radius) {
+    public Ellipse(Point centerPoint, Point radius) {
 
         List<PointData> pointDataList = new ArrayList<>();
         pointDataList.add(centerPoint.getFirstPointData());
-        pointDataList.add(new PointData(radius, radius));
+        pointDataList.add(radius.getFirstPointData());
 
         setData(new ShapeData(pointDataList, Shapes.Ellipse));
         injectDrawStrategy();
