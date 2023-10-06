@@ -2,18 +2,19 @@ package services.saveload;
 
 import data.ShapeData;
 import services.IService;
+import services.factory.IShapeFactory;
 import services.factory.ShapeFactory;
 import utils.debug;
 import shapes.*;
 
 import java.io.*;
 
-public class SaveLoadService implements IService {
+public class SaveLoadService implements ISaveLoadService {
 
     public static final String SAVE_FILE = "D:\\save.txt";
-    private final ShapeFactory shapeFactory;
+    private final IShapeFactory shapeFactory;
 
-    public SaveLoadService(ShapeFactory shapeFactory) {
+    public SaveLoadService(IShapeFactory shapeFactory) {
         this.shapeFactory = shapeFactory;
     }
 

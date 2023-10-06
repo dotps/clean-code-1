@@ -1,6 +1,10 @@
 package services.input;
 
 import services.draw.DrawService;
+import services.draw.IDrawService;
+import services.factory.IShapeFactory;
+import services.factory.ShapeFactory;
+import services.saveload.ISaveLoadService;
 import services.saveload.SaveLoadService;
 import shapes.*;
 import utils.debug;
@@ -8,12 +12,14 @@ import utils.debug;
 import java.io.IOException;
 
 public class InputService implements IInputService {
-    private final DrawService drawService;
-    private final SaveLoadService saveLoadService;
+    private final IDrawService drawService;
+    private final ISaveLoadService saveLoadService;
+    private final IShapeFactory shapeFactory;
 
-    public InputService(DrawService drawService, SaveLoadService saveLoadService) {
+    public InputService(IDrawService drawService, ISaveLoadService saveLoadService, IShapeFactory shapeFactory) {
         this.drawService = drawService;
         this.saveLoadService = saveLoadService;
+        this.shapeFactory = shapeFactory;
     }
 
     @Override
